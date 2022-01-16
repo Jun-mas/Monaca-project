@@ -1,0 +1,80 @@
+<ons-page>
+  <div class="page__background" style="background-color: #EEEEEE"></div>
+    <div ng-controller="gameCtrl as game">
+      <ons-toolbar style="background-color:#3DD3A9">
+        <div class="left" ng-click="game.backTop()">
+          <ons-back-button><p>ホーム</p></ons-back-button>
+        </div>
+        <div class="center">
+        動画 
+        </div>
+        <div class="right">
+          <p>{{game.items.currentNum + 1}}/{{game.items.totalNum}}</p>
+        </div>
+      </ons-toolbar>
+      <div class="youtube">
+        <youtube id="youtube"></youtube>
+      </div>
+      <div class="hideSub">
+        <hide></hide>
+      </div>
+      <div class="body">
+        <div class="question">
+          <p>({{game.items.currentNum + 1}}){{game.items.currentQ.text}}</p>
+        </div>
+        <textarea class="textarea" rows="1" ng-model="game.answer" style= "font-size:20px;font-family:Heiti SC;font-weight:300;overflow:auto"  readonly="readonly" id="textarea" name="text" ></textarea>
+        <div class = "choices">
+          <ons-row>
+            <div ng-repeat="choice in game.items.currentQ.choices track by $index">
+              <div class="choice">
+                <button class="button"
+                style="padding:2px 8px;font-size:20px;font-family:Heiti SC;font-weight:300;color:black;background-color:white;border:1px solid #3DD3A9;box-shadow: 1px 1px 3px gray"
+                id="{{$index}}"
+                ng-click="game.choiceWord($index)" ng-disabled="game.items.currentQ.status[$index]">
+                {{choice}}
+                </button>
+              </div>
+            </div>
+          </ons-row>
+        </div>
+        <div class="tool">
+          <ons-row>
+            <div class="toolButton1">
+              <button class="button"  style="width:95px;padding:0px 5px;background-color:#3DD3A9;color:white;box-shadow: 1px 1px 3px gray" ng-click="game.reset()">
+              削除
+              </button>
+            </div>
+            <div class="toolButton2">
+              <button class="button"  style="width:95px;padding:0px 5px;background-color:#3DD3A9;color:white;box-shadow: 1px 1px 3px gray" ng-click="game.back()">
+              戻す
+              </button>
+            </div>
+            <div class="toolButton3">
+              <button class="button"  style="width:95px;padding:0px 5px;background-color:#3DD3A9;color:white;box-shadow: 1px 1px 3px gray" ng-click="game.dictionary()">
+              辞書
+              </button>
+            </div>
+          </ons-row>
+        </div>
+      </div>
+      <div class="bottom">
+        <ons-row>
+          <div class="bottomButton1">
+            <button class="button" style="margin-top:8.5px;background-color:white" ng-click="game.backQuestion()">
+            <ons-icon icon="fa-step-backward" style="color:#3DD3A9" size="30px"></ons-icon>
+            </button>
+          </div>
+          <div class="bottomButton2">
+            <button class="button" style="width:50px;margin-top:8.5px;background-color:white" ng-click="game.play()">
+            <a class="fas fa-play" id="player" ></a>
+            </button>
+          </div>
+          <div class="bottomButton3">
+            <button class="button"  style="margin-top:8.5px;background-color:white"   ng-click="game.nextQuestion()"><ons-icon icon="fa-step-forward" style="color:#3DD3A9" size="30px"></ons-icon>
+            </button>
+          </div>
+        </ons-row>
+      </div>
+    </div>
+  </div>
+</ons-page>

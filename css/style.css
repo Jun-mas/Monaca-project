@@ -1,0 +1,344 @@
+/***************
+*top.html
+****************/
+.toolbar{
+  position: relative !important;
+  top:0px !important;
+}
+
+.list__item{
+  height:62.5px !important;
+  line-height: 1.5;
+  background-color: white;
+  
+}
+
+.chapter{
+ display: inline-block;
+ vertical-align: middle;
+}
+
+.search{
+ margin:8px
+}
+input[type="text"]{
+  position:relative;
+  display:block;
+  font-family: FontAwesome;
+  border-radius:5px;
+  border:none;
+  height:28px;
+  line-height: 20px;
+  width:100%;
+  box-sizing: border-box;
+  font-size:15px;
+  background-color:white;
+}
+
+/***************
+*menu.html
+****************/
+.list__item.menu{
+  height:50px !important;
+  align-items:center;
+  display:flex;
+}
+
+select {
+border:none;
+-webkit-appearance: none;
+height:45px;
+font-size:17px;
+background-color: white;
+padding-left:100px;
+}
+
+.list__header{
+  color:gray;
+  font-size:14px;
+}
+
+/***************
+game.html
+****************/
+.youtube{
+ width:100%;              /*横幅いっぱいにwidthを指定*/
+ padding-bottom: 56.25%;  /*高さをpaddingで指定(16:9)*/
+ height:0px;              /*高さはpaddingで指定するためheightは0に*/
+ position: relative;
+}
+
+.youtube youtube{
+ z-index: 1;
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+}
+
+.hideSub{
+ top:0;
+ width:100%;              /*横幅いっぱいにwidthを指定*/
+ padding-bottom: 56.25%;  /*高さをpaddingで指定(16:9)*/
+ height:0px;              /*高さはpaddingで指定するためheightは0に*/
+ position: absolute;
+}
+
+.hideSub hide{
+ z-index: 2;
+ position: absolute;
+ bottom:0px;/*変更*/
+ left: 0;
+ right:0;
+ width: 70%;
+ height: 8%;
+ margin:0 auto;
+ -webkit-backdrop-filter: blur(5px);
+}
+
+.center{
+  color:white;
+}
+
+.right p{
+  color:white;
+  margin:10px;
+
+
+}
+.left{
+  color:white;
+}
+
+ons-back-button i{
+  color:white;
+}
+
+ons-back-button p{
+  color:white;
+  margin:0 auto;
+}
+
+.question p{
+  width:100%;
+  margin:0px;
+  padding:0px;
+  font-size: 15px;
+  font-weight:300;
+  color:#3DD3A9;
+  line-height: 18px;
+}
+
+.textarea{
+  top:30px;
+  right:0;
+  left:0;
+  display:block;
+  border:2px solid #3DD3A9;
+  border-radius: 5px;
+  background-color: white;
+  width: 100%;
+  margin:8px 0;
+  padding:5px;
+  font-family:Heiti SC;
+  font-weight:300;
+  line-height: 25px;
+}
+
+.choices{
+ margin:10px 0;
+ width:100%;
+}
+
+.choice{
+  margin: 4.5px 9px 4.5px 0px;
+}
+
+.body{
+  right:0px;
+  left:0px;
+  position: relative;
+  border-radius:6px;
+  border:0.5px solid #ddd;
+  background-color: white;
+  margin:9px;
+  padding:9px;
+}
+
+.body p1{
+   margin:0px;
+  padding:0px;
+  font-size: 15px;
+  font-weight:300;
+  color:#3DD3A9;
+}
+.body p2{
+   margin:0px;
+  padding:0px;
+  font-size: 15px;
+  font-weight:300;
+  color:black;
+}
+
+.tool{
+  width:100%;
+}
+.toolButton1{
+  margin-left:0px;
+}
+.toolButton2{
+  margin:auto;
+}
+.toolButton3{
+  margin-right:0px;
+}
+
+.bottom{
+  right:0;
+  left:0;
+  position: absolute;
+  bottom:0px;
+  height:55px;
+  margin:0 auto;
+  border-top:0.5px solid;
+  border-color:#ddd;
+  background-color: white;
+}
+.bottomButton1{
+   margin:auto;
+}
+
+.bottomButton2{
+  margin:auto;
+}
+
+.bottomButton3{
+  margin:auto;
+}
+
+.fas{
+  font-family: FontAwesome;
+  font-size:30px;
+  color:#3DD3A9;
+  background-color:white;
+}
+
+.iframe{
+  width:100%;
+  height:800px;
+}
+/***************
+dictionary.html
+****************/
+.list__item.dictionary{
+  height:50px !important;
+  display:flex;
+  align-items:center;
+  font-size:25px !important;
+  font-family:Heiti SC;
+  font-weight:300;
+}
+
+.dictionaryChoices{
+ top:80px;
+ margin:0 auto;
+ padding:7px 0px;
+ display: flex;
+ width: 100%;
+ overflow-x: auto;
+}
+
+.dictionaryChoice{
+  margin: 0px 0px 0px 7px;
+
+}
+
+.dictionaryBody{
+  width:100%;
+  right:0px;
+  left:0px;
+  position: relative;
+  background-color:  white;
+  border-bottom:0.5px solid #ddd;
+	-webkit-overflow-scrolling: touch;
+}
+
+.dictionaryIframe{
+  position: relative;
+}
+
+/***************
+*result.html
+****************/
+.fullVideo{
+  width:100%;              /*横幅いっぱいにwidthを指定*/
+  padding-bottom: 56.25%;  /*高さをpaddingで指定(16:9)*/
+  height:0px;              /*高さはpaddingで指定するためheightは0に*/
+  position: relative;
+}
+
+.fullVideo iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.resultBottom{
+  right:0;
+  left:0;
+  position: absolute;
+  bottom:0px;
+  margin:0px;
+  border-top:0.5px solid;
+  border-color:#ddd;
+  height:60px;
+  background-color: white;
+}
+
+.resultBottom button{
+  margin:10px auto;
+  width:95%;
+  font-size:20px;
+  height:40px;
+  background-color:#3DD3A9;
+  color:white;
+  right:0px;
+  left:0px;
+  position: absolute;
+}
+
+.allQuestion{
+  height:51.7vh;
+  overflow: scroll;
+}
+
+
+.resultBody{
+  right:0px;
+  left:0px;
+  position: relative;
+  border-radius:6px;
+  border:0.5px solid #ddd;
+  background-color: white;
+  margin:9px;
+  padding:4px 9px;
+}
+
+.resultBody p1{
+  margin:0px;
+  padding:0px;
+  font-size: 15px;
+  font-weight:300;
+  color:#3DD3A9;
+}
+
+.resultBody p2{
+  margin:0px;
+  padding:0px;
+  font-size: 15px;
+  font-weight:300;
+  font-family:Heiti SC;
+  color:black;
+}

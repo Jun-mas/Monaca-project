@@ -1,0 +1,29 @@
+<ons-page>
+  <div ng-controller="dictionaryCtrl as dictionary">
+    <ons-toolbar style="background-color:#3DD3A9">
+      <div class="left" ng-click="game.backtop()">
+        <ons-back-button><p>戻る</p></ons-back-button>
+      </div>
+      <div class="center">
+        辞書
+      </div>
+      <div class="right">
+        <button class="button"  ng-click="dictionary.openWeblio($index)"style="background-color:#3DD3A9;border: 1px solid white;font-size:12px;padding:0px 5px;line-height:23px;margin:9px;right:10px">ブラウザで表示</button>
+      </div>
+    </ons-toolbar>
+    <div class="dictionaryBody">
+      <div class="dictionaryChoices">
+        <div ng-repeat="choice in dictionary.choices track by $index">
+          <div class = "dictionaryChoice">
+            <button modifier="chevron" class="button" style="padding:0px 7px ;font-size:20px;font-family:Heiti SC;font-weight:300;color:black;background-color:#EEEEEE;border:none;height:33px" ng-click="dictionary.URLClick($index)">
+            {{choice}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div  class="dictionaryIframe">
+      <iframe class="iframe"src="https://cjjc.weblio.jp/" width="100%" frameborder="0" style="border: none" id="iframe"></iframe>
+    </div>
+  </div>
+</ons-page>

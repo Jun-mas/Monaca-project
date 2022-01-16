@@ -1,0 +1,41 @@
+<ons-page>
+  <div class="page__background" style="background-color: #EEEEEE"></div>
+    <div ng-controller="menuCtrl as menu">
+      <ons-toolbar style="background-color:#3DD3A9">
+        <div class="left">
+          <ons-back-button><p>ホーム</p></ons-back-button>
+        </div>
+        <div class="center">
+          メニュー
+        </div>
+      </ons-toolbar>
+      <ons-list>
+        <ons-list-header>一般</ons-list-header>
+        <ons-list-item class="menu" ng-click="menu.openTwitter()">
+         <p style="margin: 0 5px">Twitter公式アカウント</p>
+        </ons-list-item>
+        <ons-list-item class="menu" ng-click="menu.openAppstore()">
+          <p style="margin: 0 5px">アプリを評価する</p>
+        </ons-list-item>
+        <ons-list-header>設定</ons-list-header>
+        <ons-list-item class="menu">
+          <div style="margin: 0 5px">
+            <label for="videoSpeed">再生速度</label>
+          </div>
+          <div style="margin: 0 0 0 auto">
+            <select id="videoSpeed" class="videoSpeed" > 
+              <option value="0.25">0.25倍速</option>
+              <option value="0.50">0.50倍速</option>
+              <option value="1.00">1.00倍速</option>
+              <option value="1.50">1.50倍速</option>
+              <option value="2.00">2.00倍速</option>
+            </select>
+          </div>
+        </ons-list-item>
+        <ons-list-item class="menu" ng-click="menu.removeStorageAlert()">
+          <p style="margin: 0 5px">ローカルストレージを削除</p>
+        </ons-list-item>
+      </ons-list>
+    </div>
+  </div>
+</ons-page>

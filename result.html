@@ -1,0 +1,30 @@
+<ons-page>
+  <div class="page__background" style="background-color: #EEEEEE"></div>
+    <div ng-controller="resultCtrl as result">
+      <ons-toolbar style="background-color:#3DD3A9">
+        <div class="left" ng-click="result.backTop()">
+          <ons-back-button><p>ホーム</p></ons-back-button>
+        </div>
+      <div class="center">
+        動画全編
+      </div>
+      </ons-toolbar>
+      <div class="fullVideo">
+        <iframe src="" scrolling="no" frameborder="0" style="border: none" id="fullVideo"></iframe>
+      </div> 
+      <div class="allQuestion">
+        <div ng-repeat="Question in result.totalQ track by $index" >
+          <div class="resultBody"ng-click="result.bindTime($index)">
+            <p1>({{$index+1}})</p1><p1>{{Question.text}}</p1><br>
+            <p2>{{Question.answer}}</p2>
+          </div>
+        </div>
+      </div>
+      <div class="resultBottom">
+        <button   class="button" ng-click="result.backTop()">
+        トップへ戻る
+        </button>
+      </div>
+    </div>
+  </div>
+</ons-page>
